@@ -1,0 +1,30 @@
+* D:\Users\lucas\Desktop\IC ELETRONICOS\1E_JFET_BUFFER\1E_JFET_BUFFER_THD\1E_JFET_BUFFER_THD.asc
+V1 V+ 0 30
+V2 0 V- 30
+I1 N012 V- 0.1m
+R1 V+ N002 {RD}
+R2 V+ N004 {RD}
+R7 V+ N001 {RB}
+R9 V+ vout {RB}
+R8 N009 V- {RB}
+R10 N011 V- {RB}
+Q3 0 N003 N011 0 2SC2240
+Q4 N003 N002 N001 0 2SA970
+R3 N008 N012 {RE}
+R4 N010 N012 {RE}
+R5 0 N006 {RG}
+R6 N007 0 {RG}
+Q5 0 N004 vout 0 2SA970
+Q6 N003 N003 N009 0 2SC2240
+V3 N005 0 SINE(0 28.2m 1k)
+J1 N002 N006 N008 J201
+J2 N004 N007 N010 J201
+C1 N006 N005 1µ
+.model NPN NPN
+.model PNP PNP
+.lib D:\Users\lucas\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.model NJF NJF
+.model PJF PJF
+.lib D:\Users\lucas\Documents\LTspiceXVII\lib\cmp\standard.jft
+.backanno
+.end
